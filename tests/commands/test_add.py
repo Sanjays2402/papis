@@ -368,7 +368,7 @@ def test_add_edit_failure(
     mkdtemp = tempfile.mkdtemp
 
     def record_mkdtemp(*args: Any, **kwargs: Any) -> str:
-        path = mkdtemp(*args, **kwargs)
+        path: str = mkdtemp(*args, **kwargs)
         temp_dirs.append(path)
         return path
 
